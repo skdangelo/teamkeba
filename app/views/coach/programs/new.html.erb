@@ -1,0 +1,17 @@
+<br />
+<div class="booyah-box col-10 offset-1">
+  <h1>Add a new program</h1>
+  <%= simple_form_for @program, url: coach_program_path do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :cost %>
+    <%= f.date_field :start_date %>
+    <%= f.date_field :end_date %>
+    <%= f.input :meet_times %>
+    <%= f.input :age, collection: { "Chicago", "South Florida - Central", "South Florida - South", "South Florida - North", "Puerto Rico" } %>
+    <br />
+    <%= f.submit "Create", class: 'btn btn-primary' %>
+    <br />
+  <% end %>
+  <br />  
+</div>

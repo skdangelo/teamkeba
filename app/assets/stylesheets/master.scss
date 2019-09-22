@@ -1,10 +1,10 @@
 @import "bootstrap";
 
 .navbar {
+  background: image_url('bg.png');
+  box-shadow: 0px 1px 3px #2a2a2a;
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 200;
-  box-shadow: 0px 1px 3px #2a2a2a;
-  background: image_url('gun_metal.png');
 }
 
 .navbar-inverse a.navbar-brand {
@@ -21,10 +21,6 @@
   background-size: cover;
   height: 370px;
   box-shadow: 0px 3px 8px #2a2a2a;
-}
-
-h1, h2, h3, h4, h5, h6, .navbar {
-  margin: 0;
 }
 
 .frosty {
@@ -46,15 +42,109 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 .btn {
   border-radius: 0;
+   background-color: #DC143C;
 }
 
 .feature {
   width: 100%;
   padding-left: 5%;
-  padding-right: 5%;
+  padding-right: 5%;  
 }
 
 body {
-  background: image_url('bg.png');
-  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  background: image_url('gun_metal.png');
+  font-family: Constantia, "Lucida Bright", "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  color:LightGray;
+}
+
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 10px;
+}
+
+.booyah-box h2, .booyah-box h1 {
+  margin: 10px;
+}
+
+h1, h2, h3, h4, h5, h6, navbar {
+  margin: 0;
+}
+
+.help-block {
+  color: #ff3333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding: 2px 8px 2px 8px;
+  margin: 10px;
+}
+
+.clr {
+  clear: both;
+}
+
+.lesson {
+  background-color: black;
+  margin-top: 10px;
+  height: 130px;
+}
+
+.lesson a {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;  
+  font-size: 15px;
+  }
+
+.lesson a b {
+  font-weight: 100;
+  font-size: 25px;
+}
+
+.section {
+  border: 1px solid;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.section-li {
+  border: 1px solid;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 20px;
+  margin: 20px;
+}
+
+ul .header {
+  font-size: 25px;
+}
+
+ul .header .fa {
+  font-size: 20px;
+}
+
+.lessons li {
+  background: black;
+  color: white;
+  margin: 10px;
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;
+  padding: 8px;  
+  font-size: 15px;
+}
+
+.lessons li b {
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.lessons li p {
+  margin: 0;
 }
