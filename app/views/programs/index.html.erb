@@ -5,14 +5,18 @@
   <hr />
 
   <% @programs.each do |program| %>
-    <h2 class="text-center"><%= program.title %></h2>
-    <br />
+    <h2 class="text-center">
+      <%= link_to program.title, program_path(program) %>
+    </h2>
+    <% if program.image.present? %>
+      <%= image_tag program.image.url, class: 'img-fluid' %>
+    <% end %>    
     <div class="row">
       <div class="col-sm-8 col-12">
         <%= program.description %>
       </div>
       <div class="col-sm-4 col-12 text-center">
-        <%= link_to 'Button', '#', class: 'btn btn-primary btn-large' %>
+        <%= link_to 'More Details...', program_path(program), class: 'btn btn-primary btn-large' %>
       </div>    
     </div>
     <br class="clr" />

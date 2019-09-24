@@ -63,6 +63,15 @@ gem 'popper_js', '>= 1.12.3'
 gem 'bootstrap', '4.3.1'
 gem 'simple_form'
 gem 'devise'
+gem 'figaro'
+gem "fog-aws"
+gem 'carrierwave', '~> 2.0'
+gem "mini_magick"
+gem 'jquery-ui-rails'
+gem 'stripe'
+gem 'ranked-model'
+gem "font-awesome-rails"
+gem "geocoder"
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'

@@ -1,5 +1,5 @@
 class Coach::ProgramsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   def new
     @program = Program.new
   end
@@ -11,14 +11,28 @@ class Coach::ProgramsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end    
-    
   end
+
+  def destroy
+    @program = Program.find(params[:id])
+    if @program.user != current_user
+      return render plain: 'Not Allowed', status: :forbidden
+    end
+
+    @program.destroy
+    redirect_to root_path
+  end  
 
   def show
     @program = Program.find(params[:id])
   end
 
   private
+
+  helper_method :current_program
+  def current_program
+    @current_program ||= Program.find(params[:id])
+  end
 
   def program_params
     params.require(:program).permit(:title, :description, :cost)
