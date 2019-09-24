@@ -6,7 +6,12 @@ class Coach::ProgramsController < ApplicationController
 
   def create
     @program = current_user.programs.create(program_params)
-    redirect_to coach_program_path(@program)
+    if @program.valid?
+      redirect_to coach_program_path(@program)
+    else
+      render :new, status: :unprocessable_entity
+    end    
+    
   end
 
   def show
