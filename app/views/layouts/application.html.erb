@@ -22,22 +22,22 @@
               <%= link_to 'Programs', programs_path, class: 'nav-link' %>
             </li>
             <li class="nav-item">
-              <%= link_to 'News', root_path, class: 'nav-link' %>
+              <%= link_to 'News', '#', class: 'nav-link' %>
             </li>
             <li class="nav-item">
-              <%= link_to 'Calendar', programs_path, class: 'nav-link' %>
+              <%= link_to 'Calendar', calendar_path, class: 'nav-link' %>
             </li>   
             <li class="nav-item">
-              <%= link_to 'Gallery', programs_path, class: 'nav-link' %>
+              <%= link_to 'Gallery', '#', class: 'nav-link' %>
             </li>                     
             <li class="nav-item">
-              <%= link_to 'About Us', root_path, class: 'nav-link' %>
+              <%= link_to 'About Us', aboutus_path, class: 'nav-link' %>
             </li>
             <li class="nav-item">
-              <%= link_to 'Contact Us', root_path, class: 'nav-link' %>
+              <%= link_to 'Contact Us', contactus_path, class: 'nav-link' %>
             </li>
             <li class="nav-item">
-              <%= link_to 'Resources', root_path, class: 'nav-link' %>
+              <%= link_to 'Resources', paperwork_path, class: 'nav-link' %>
             </li>            
           </ul>
           <ul class="navbar-nav">
@@ -85,13 +85,17 @@
           </div>
           <div class="col-12 col-sm-3 social">
             <b>Social</b>
-              <br />
-              <br />
-              <%= link_to 'http://github.com/skdangelo' do %>
-                <span class="fa fa-github-square fa-2x social-button"></span>
-              <% end %>
+            <br />
+            <br />
+            <%= link_to 'https://www.instagram.com/kpva_eliteschicago/' do %>
+              <span class="fa fa-instagram fa-2x social-button"></span>
+            <% end %>
+            <%= link_to 'https://www.facebook.com/KPVAELITES/' do %>
               <span class="fa fa-facebook-square fa-2x social-button"></span>
-              <span class="fa fa-twitter-square fa-2x social-button"></span>     
+            <% end %>
+            <%= link_to 'https://twitter.com/kpva_elites' do %>
+              <span class="fa fa-twitter-square fa-2x social-button"></span>
+            <% end %>
           </div>
         </div>   
       </div>
