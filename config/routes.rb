@@ -7,15 +7,19 @@ Rails.application.routes.draw do
   get 'contactus', to: 'static_pages#contactus'
   get 'calendar', to: 'static_pages#calendar'
   get 'paperwork', to: 'static_pages#paperwork'
-
-  resources :programs, only: [:index, :show]
-  namespace :coach do
-    resources :programs, only: [:new, :create, :show]
+  resources :programs, only: [:index, :show] do
+    resources :enrollments, only: :create
   end
 
-  get '/redirect', to: 'calendars#redirect', as: 'redirect'
-  get '/callback', to: 'calendars#callback', as: 'callback'  
-  get '/calendars', to: 'calendars#calendars', as: 'calendars'
+  resources :programs, only: [:index, :show]
+  
+  namespace :coach do
+    resources :programs
+  end
+
+  get '/redirect', to: 'calendar#redirect', as: 'redirect'
+  get '/callback', to: 'calendar#callback', as: 'callback'  
+  get '/calendars', to: 'calendar#calendars', as: 'calendars'
   get '/events/:calendar_id', to: 'calendar#events', as: 'events', calendar_id: /[^\/]+/
   post '/events/:calendar_id', to: 'calendar#new_event', as: 'new_event', calendar_id: /[^\/]+/
 end

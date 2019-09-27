@@ -6,11 +6,14 @@
   <% end %>    
   <br/>
   <p><%= current_program.description %></p>
+  <p><%= current_program.start_date %></p>
+  <p><%= current_program.end_date %></p>
   <br/><br/>
-  <i><%= current_program.location %></i>
+  <i><%= current_program.address %></i>
   <div class="float-right">
     <% if current_user && current_user == current_program.user %>
-      <%= link_to 'Destroy', program_path(current_program), method: :delete, data: {confirm: 'Are you sure you want to delete this program?'}, class: 'btn btn-danger' %>
+      <%= link_to 'Destroy Program', coach_program_path(current_program), method: :delete, data: {confirm: 'Are you sure you want to delete this program?'}, class: 'btn btn-danger' %> 
+      <%= link_to 'Edit Program', edit_coach_program_path(current_program), method: :edit, class: 'btn btn-danger', method: :post %>         
     <% end %>
   </div>  
 </div>

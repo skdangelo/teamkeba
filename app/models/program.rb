@@ -1,7 +1,9 @@
 class Program < ApplicationRecord
   mount_uploader :image, ImageUploader
+  
   belongs_to :user
-  geocoded_by :location
+  has_many :enrollments
+  geocoded_by :address
   after_validation :geocode
   
   validates :title, presence: true

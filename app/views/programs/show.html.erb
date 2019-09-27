@@ -4,7 +4,7 @@
   <% if @program.image.present? %>
     <%= image_tag @program.image.url, class: 'img-fluid' %>
   <% end %>  
-  <i><%= @program.location %></i>
+  <i><%= @program.address %></i>
   <br/><br/>
   <div class="row">
     <div class="col-sm-4 col-12">
@@ -18,14 +18,21 @@
         <br />
         <br />
         <%= link_to 'Administer', coach_program_path(@program), class: 'btn btn-danger btn-large' %>
-        <%= link_to 'Destroy', program_path(@program), method: :delete, data: {confirm: 'Are you sure you want to delete this?'}, class: 'btn btn-danger' %>      
       <% end %>
-    </div>
+      <br />
+      <br />
+
+      <% if current_user && current_user.enrolled_in?(@program) %>
+        <h3 class="badge badge-info">You Are Enrolled!</h3>
+      <% else %>
+        <%= link_to 'Enroll', program_enrollments_path(@program), class: 'btn btn-primary', method: :post %>
+      <% end %>
+     </div>
 
     <div class="col-sm-8 col-12">
       <p><%= @program.description %></p>
       <p><%= @program.meet_times %></p>
-      <p><%= @program.location %></p>
+      <p><%= @program.address %></p>
       <p><%= @program.image %></p>
 
       <% if @program.latitude.present? && @program.longitude.present? %>
@@ -42,7 +49,7 @@
             var marker = new google.maps.Marker({
               position: myLatLng,
               map: map,
-              title: 'Location'
+              title: 'Address'
             });
           }
         </script>

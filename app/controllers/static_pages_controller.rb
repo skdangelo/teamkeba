@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def index
+    @programs = Program.all
   end
 
   def calendar

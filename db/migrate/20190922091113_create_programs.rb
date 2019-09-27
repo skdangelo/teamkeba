@@ -3,11 +3,12 @@ class CreatePrograms < ActiveRecord::Migration[5.2]
     create_table :programs do |t|
       t.string :title
       t.text :description
+      t.string :tag_text
       t.decimal :cost
       t.date :start_date
       t.date :end_date
       t.text :meet_times
-      t.text :location
+      t.string :address
       t.integer :user_id
       t.timestamps
     end
