@@ -1,0 +1,42 @@
+<br />
+
+<div class="booyah-box col-10 offset-1">
+  <br />
+  <h1>My Enrollments</h1>
+  <% current_user.enrolled_programs.each do |program| %>
+    <h3 class="text-center">
+      <%= link_to program.title, program_path(program) %>
+    </h3>
+    <br />
+    <div class="row">
+      <div class="col-12 col-sm-8">    
+        <%= program.description %>
+      </div>   
+      <br />
+      <div class="col-12 col-sm-4 text-center">
+        <%= link_to "More Info...", program_path(program), class: 'btn btn-lg btn-primary' %>
+      </div>
+    </div>
+    <hr class="col-8 offset-2">
+    <br class="clr" />
+  <% end %>
+
+  <h1>Programs</h1>
+   <% current_user.programs.each do |program| %>
+    <h3 class="text-center">
+      <%= link_to program.title, program_path(program) %>
+    </h3>
+    <br />
+    <div class="row">
+      <div class="col-12 col-sm-8">
+        <%= program.description %>
+      </div>
+      <br />
+      <div class="col-12 col-sm-4 text-center">
+        <%= link_to "More Info...", program_path(program), class: 'btn btn-lg btn-primary' %>
+      </div>
+    </div>
+    <hr class="col-8 offset-2">
+    <br class="clr" />
+  <% end %>
+</div>
