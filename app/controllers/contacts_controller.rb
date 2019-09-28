@@ -1,0 +1,20 @@
+class ContactsController < ApplicationController
+  def index
+    @contacts = Contact.all
+  end
+
+  def new
+    @contact = Contact.new
+  end
+
+  def create
+    Contact.create(place_params)
+    redirect_to root_path
+  end
+
+  private
+
+  def contact_params
+    params.require(:contact).permit(:email, :name, :subject, :message)
+  end
+end
