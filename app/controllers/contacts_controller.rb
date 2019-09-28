@@ -8,7 +8,7 @@ class ContactsController < ApplicationController
   end
 
   def create
-    Contact.create(place_params)
+    Contact.create(contact_params)
     redirect_to root_path
   end
 
