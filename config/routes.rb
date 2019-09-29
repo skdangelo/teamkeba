@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   root 'static_pages#index'
 
   get 'aboutus', to: 'static_pages#aboutus'
-  get 'contactus', to: 'static_pages#contactus'
   get 'calendar', to: 'static_pages#calendar'
   get 'paperwork', to: 'static_pages#paperwork'
+  get 'news', to: 'static_pages#news'
+  get 'gallery', to: 'static_pages#gallery'
   resources :programs, only: [:index, :show] do
     resources :enrollments, only: :create
   end

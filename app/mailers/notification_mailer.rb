@@ -3,6 +3,6 @@ class NotificationMailer < ApplicationMailer
 
   def contact_added(contact)
     mail(to: "skdangelo@gmail.com",
-         subject: "Team Keba Email from #{contact.name}")   
+         subject: "Team Keba Email")   
   end
 end

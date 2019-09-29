@@ -24,7 +24,7 @@ class Coach::ProgramsController < ApplicationController
       return render plain: 'Not Allowed', status: :forbidden
     end
     @program.destroy
-    redirect_to root_path
+    redirect_to programs_path
   end  
 
   def edit

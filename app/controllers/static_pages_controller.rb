@@ -9,9 +9,9 @@ class StaticPagesController < ApplicationController
   def aboutus
   end  
 
-  def contactus
+  def paperwork
   end    
 
-  def paperwork
+  def news
   end    
 end

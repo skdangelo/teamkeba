@@ -13,7 +13,8 @@
     <% end %>    
     <div class="row">
       <div class="col-sm-8 col-12">
-        <%= program.description %>
+        <%= program.description %><br />
+        <%= number_to_currency program.cost %> per month
       </div>
       <div class="col-sm-4 col-12 text-center">
         <%= link_to 'More Details...', program_path(program), class: 'btn btn-primary btn-large' %>
