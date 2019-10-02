@@ -51,6 +51,9 @@
               <li class="nav-item">
                 <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
               </li>
+              <li class="nav-item">
+                <%= link_to 'Edit Profile', edit_user_registration_path %>
+              </li>
             <% else %>
               <li class="nav-item">
                 <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
@@ -74,13 +77,15 @@
     <div id="footer">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-sm-3">
-            <b>Admin</b>
-            <br />
-            <%= link_to 'Add A Program', new_coach_program_path %>
-            <br />
-            <%= link_to 'My Dashboard', dashboard_path %>            
-          </div>
+          <% if current_user.try(:admin?) %>
+            <div class="col-12 col-sm-3">
+              <b>Admin</b>
+              <br />
+              <%= link_to 'Add A Program', new_coach_program_path %>
+              <br />
+              <%= link_to 'My Dashboard', dashboard_path %>            
+            </div>
+          <% end %>
           <div class="col-12 col-sm-3">
             <b>About</b>
               <br />

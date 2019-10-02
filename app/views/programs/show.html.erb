@@ -14,7 +14,7 @@
         <%= @program.end_date %> 
       </span>
 
-      <% if current_user && current_user == @program.user %>
+      <% if current_user.try(:admin?) %>
         <br />
         <br />
         <%= link_to 'Administer', coach_program_path(@program), class: 'btn btn-danger btn-large' %>

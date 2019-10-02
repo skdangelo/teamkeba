@@ -22,14 +22,45 @@
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
   </div>
+    <div>
+       <em>Player Information</em><br>
+       <label>First Name: </label> <%= f.text_field :firstname %> &nbsp&nbsp &nbsp&nbsp
+       <label>Last Name:</label> <%= f.text_field :lastname %> &nbsp&nbsp &nbsp&nbsp
+       <label>DOB:</label> <%= f.date_select :dob, :start_year => 2000, :end_year =>2014 %> <br>
+       <label>Gender: &nbsp&nbsp &nbsp&nbsp</label> <%= f.select :gender, ['Female', 'Male'] %><br>
+       <label>Email: &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp</label> <%= f.text_field :playeremail %> <br>
+       <label>Cell Phone:</label> <%= f.text_field :cell %> <br>
+       <label>School: &nbsp&nbsp&nbsp &nbsp&nbsp </label> <%= f.text_field :school %> <br>
+       <label>Grade: &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp</label> <%= f.select :yearschool, ['6th', '7th', '8th', '9th', '10th', '11th', '12th', 'K', '1st', '2nd', '3rd', '4th', '5th'] %> <br>
+       <br/><br/>
+      <em>Athlete's Parent's (Mom or Dad)</em><br>
+      <label>Parent 1 Name:</label> <%= f.text_field :parent1 %> &nbsp&nbsp &nbsp&nbsp
+      <label>Cell: </label> <%= f.text_field :parent1cell %> &nbsp&nbsp &nbsp&nbsp
+       <br/><br/>
+      <em>Athlete's Parent's (Mom or Dad)</em><br>
+      <label>Parent 2 Name: </label> <%= f.text_field :parent2 %> &nbsp&nbsp &nbsp&nbsp
+      <label>Email:</label> <%= f.text_field :parent2cell %> &nbsp&nbsp &nbsp&nbsp
+      <label>Cell:</label> <%= f.text_field :parent2email %> &nbsp&nbsp &nbsp&nbsp    
+      <br/><br/>
+      <em>Home Address</em><br>
+      <label>Street Address: </label> <%= f.text_field :homeaddress %> &nbsp&nbsp &nbsp&nbsp
+      <label>City: </label> <%= f.text_field :homecity %> &nbsp&nbsp &nbsp&nbsp
+      <label>State:</label> <%= f.text_field :homestate %> &nbsp&nbsp &nbsp&nbsp
+      <label>Zip:</label> <%= f.text_field :homezip %> &nbsp&nbsp &nbsp&nbsp
+      <br/><br/>
+      <em>Desired Position</em><br>
+      <label>Position 1</label> <%= f.select :position1, ['Outside Hitter', 'Middle', 'Right Side', 'Setter', 'Libero/DS'] %> 
+      <label>Position 2 </label> <%= f.select :position2, ['Outside Hitter', 'Middle', 'Right Side', 'Setter', 'Libero/DS'] %> 
+      <label>Referred By: </label> <%= f.text_field :referredby %> &nbsp&nbsp &nbsp&nbsp
 
+    </div> 
   <div class="form-actions">
     <%= f.button :submit, "Update" %>
   </div>
 <% end %>
-
+<!-- 
 <h3>Cancel my account</h3>
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<p><%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p> -->
 
 <%= link_to "Back", :back %>
