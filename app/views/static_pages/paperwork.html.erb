@@ -2,17 +2,30 @@
 <br />
 
 <div class="booyah-box col-10 offset-1">
-  <h1>Resources</h1>
-  <p>
-    <%= link_to 'Medical Release form', asset_path('medicalrelease.pdf'), class: 'nav-link' %>
-  </p>
-  <p>
-    <%= link_to 'Letter of Agreement', asset_path('letterofagreement.pdf'), class: 'nav-link' %>
-  </p>
-  <p>
-  <%= link_to 'USAV Membership', 'https://www.teamusa.org/USA-Volleyball/Membership/Join', class: 'nav-link' %>
-  </p>
-  <p>
-  <%= link_to 'AAU Membership', 'https://play.aausports.org/joinaau/membershipapplication', class: 'nav-link' %>
-  </p>
+  <div class="row">
+    <div class="col-sm-4 col-12">
+      <h1>Resources</h1>
+      <p>
+        <%= link_to 'A Junior National Volleyball Club', asset_path('A Junior National Volleyball Club.pdf'), class: 'nav-link' %>
+      </p>
+      <p>
+        <%= link_to 'Club Information', asset_path('pricing.pdf'), class: 'nav-link' %>
+      </p>      
+      <p>
+        <%= link_to 'Medical Release form', asset_path('medicalrelease.pdf'), class: 'nav-link' %>
+      </p>
+      <p>
+        <%= link_to 'Letter of Agreement', asset_path('letterofagreement.pdf'), class: 'nav-link' %>
+      </p>
+      <p>
+      <%= link_to 'USAV Membership', 'https://www.teamusa.org/USA-Volleyball/Membership/Join', class: 'nav-link' %>
+      </p>
+      <p>
+      <%= link_to 'AAU Membership', 'https://play.aausports.org/joinaau/membershipapplication', class: 'nav-link' %>
+      </p>
+    </div>
+    <div class="col-sm-4 col-12">
+      <%= image_tag "serve.png" %>
+    </div>
+  </div>
 </div>
