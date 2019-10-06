@@ -1,34 +1,105 @@
-<div class="overlay"></div>
-<div class="home-video-wrapper">
-  <%= video_tag "hero.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
-</div>
-
-<br />
-
-<div class="row feature text-center">
-  <div class="col-12 col-lg">
-    <%= image_tag "kpva.png", size: "300x300" %>
-  </div>  
-</div>
-<div class="row feature text-center">
-  <div class="col-12 col-sm">
-    <h3>Sept-Oct Training Plans</h3>
-    <br />
-    <p>This All-Star Training Team is a program solely dedicated to skill development.<br/><br/></p>
-    <%= link_to 'Learn More', programs_path("4"), class: 'btn btn-success' %>   
+<div id="hero-block">
+  <div class="overlay"></div>
+  <div class="home-video-wrapper">
+    <%= video_tag "hero.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
   </div>
 
-  <div class="col-12 col-sm">
-    <h3>New Beginner Academy</h3>
-    <br />
-    <p>This program is dedicated to players new to the sport. Beginning with fundamental skills, players can quickly advance to more advanced skill areas.</p>
-    <%= link_to 'Learn More', programs_path, class: 'btn btn-success' %>   
-  </div>
+  <br />
 
-  <div class="col-12 col-sm">
-    <h3>Club Season Tryouts</h3>
-    <br />
-    <p>Register for 2019-2020 Club Season <br/><br/><br/></p>
-    <%= link_to 'Learn More', programs_path, class: 'btn btn-success' %>    
-  </div>  
+  <div class="row feature text-center">
+    <div class="col-12 col-lg">
+      <%= image_tag "kpva.png", size: "300x300" %>
+    </div>  
+  </div>
+  <div class="row feature text-center">
+    <div class="col-12 col-sm">
+      <h3>Sept-Oct Training Plans</h3>
+      <br />
+      <p>This All-Star Training Team is a program solely dedicated to skill development.<br/><br/></p>
+      <%= link_to 'Learn More', programs_path("4"), class: 'btn btn-success' %>   
+    </div>
+
+    <div class="col-12 col-sm">
+      <h3>New Beginner Academy</h3>
+      <br />
+      <p>This program is dedicated to players new to the sport. Beginning with fundamental skills, players can quickly advance to more advanced skill areas.</p>
+      <%= link_to 'Learn More', programs_path, class: 'btn btn-success' %>   
+    </div>
+
+    <div class="col-12 col-sm">
+      <h3>Club Season Tryouts</h3>
+      <br />
+      <p>Register for 2019-2020 Club Season <br/><br/><br/></p>
+      <%= link_to 'Learn More', programs_path, class: 'btn btn-success' %>    
+    </div>  
+  </div>
+  <br />
 </div>
+<div class="clr"></div>
+<div class="aboutus-block">
+      <br /><br />
+          <h1>Mission</h1>
+          <h3>
+Team Keba/Coastal Volleyball was established with the goal of providing high quality year-round training to dedicated athletes.  While this goal seems widely used, our club utilizes a very different approach.  Our mission has many facets and many levels and each individual athlete, coach and team are subject to each and every one of these intricate details to maintain the values of the club on and off the court.  The major facets include: Developing an All-around Player, Developing a Personal Style, being Intelligent and Tactical, and being an Emotionally Solid Player.  We also will not exclude any player that cannot afford to play and are willing and able to prove financial need.  We will not leave any player behind.
+        </h3>          
+        <br /><br />
+        <h3>
+          <%= link_to 'Club Handbook', asset_path('A Junior National Volleyball Club.pdf'), class: 'link link--is-light link--has-anchor-animation link--is-default' %>
+        </h3>
+        <h3>
+          <%= link_to 'Club Information', asset_path('pricing.pdf'), class: 'nav-link' %>
+        </h3>
+        <br /><br />
+        <h3>
+          <%= link_to 'More Resources', paperwork_path, class: 'btn btn-success' %>   
+        </h3>
+        <br /><br />
+  </div>
+ <div class="success-header-block">
+    <br /><br /><br /><br />
+    <h1>Success</h1>
+    <br /><br /><br /><br />
+ </div>
+  <div class="success-block">
+     <div class="row feature text-center">
+    <div class="col-12 col-sm">
+      <h1>#1</h1>
+      <br />
+      <p>Success numbers here...<br/><br/></p>
+    </div>
+
+    <div class="col-12 col-sm">
+      <h1>#2</h1>
+      <br />
+      <p>Success numbers here...</p> 
+    </div>
+
+    <div class="col-12 col-sm">
+      <h1>#3</h1>
+      <br />
+      <p>Success numbers here...<br/><br/><br/></p> 
+    </div>  
+  </div>
+  </div>
+ <div class="news-header-block">
+  <br /><br /><br /><br />
+   <h1>News</h1>
+   <br /><br /><br /><br />
+ </div>
+  <div class="news-block">
+      <h3>
+      UPCOMING EVENTS  
+      </h3>
+      <p>
+      October 23 - Tryouts <br />  
+        5:30 U14 and under<br />
+        6:30 U15-U18* <br />
+      </p>  
+  </div>
+ <div class="featured-header-block">
+    <h1>&nbsp</h1>
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+ </div>

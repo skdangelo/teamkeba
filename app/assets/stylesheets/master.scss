@@ -15,18 +15,18 @@
 }
 
 .hero {
-  background: image_url('hero.jpeg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   height: 370px;
   box-shadow: 0px 3px 8px #2a2a2a;
 }
 
 .btn {
   border-radius: 0;
-   background-color: #DC143C;
+  background-color: #DC143C;
+}
+
+.btn:hover {
+  background-color: #008CBA; 
+  color: white;
 }
 
 .feature {
@@ -46,7 +46,7 @@ header {
 
 .home_video {
  width: 100%;
- height: 100vh;
+ height: 100%;
  position: absolute;
  object-fit: cover;
  top: 0;
@@ -64,6 +64,10 @@ h1.home {
 
 body {
   background: image_url('gun_metal.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   font-family: Constantia, "Lucida Bright", "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
   color:LightGray;
 }
@@ -158,4 +162,81 @@ ul .header .fa {
 
 .lessons li p {
   margin: 0;
+}
+
+.hero-block {
+  height: 370px;
+  background-color: #E7717D;
+}
+
+.aboutus-block {
+  background-color: #C2B9B0;
+  color: white;
+  text-align: center;
+}
+
+.aboutus-block h1 {
+  color: teal;
+  font-size:12vw;
+}
+
+.success-header-block {
+  background: image_url('court.jpg') no-repeat fixed center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+}
+
+.success-header-block h1 {
+  color: teal;
+  font-size:12vw;
+}
+
+.success-block {
+  height: 75vh;
+  background-color: #7D9F9E;
+}
+
+.success-block h1 {
+  color: white;
+  font-size:12vw;
+}
+
+.news-header-block {
+  background: image_url('news.jpeg') no-repeat fixed center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  color: black;
+} 
+
+.news-header-block h1 {
+  color: aqua;
+  font-size:12vw;
+} 
+
+.news-block {
+  height: 75vh;
+  background-color: #E7717D;
+  text-align: center;
+}
+
+.featured-header-block {
+  background: image_url('serve.png') no-repeat fixed left, image_url('bump.png') no-repeat fixed center, image_url('dig.png') no-repeat fixed right;
+  text-align: center;
+  color: black;
+} 
+
+.featured-header-block h1 {
+  color: black;
+  font-size:12vw;
+}
+
+.featured-block {
+  height: 75vh;
+  background-color: #AFD275;
 }
