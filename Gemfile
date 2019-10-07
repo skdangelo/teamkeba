@@ -75,7 +75,7 @@ gem "geocoder"
 gem 'google-api-client', require: 'google/apis/calendar_v3'
 # gem 'activemerchant'
 
-source 'http://rails-assets.org' do
+source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
 

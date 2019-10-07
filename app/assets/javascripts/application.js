@@ -14,10 +14,12 @@
 //= require activestorage
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
+//= require_tree .
 //= require turbolinks
 //= require gallery
 //= require popper
 //= require tether
 //= require bootstrap-sprockets
-//= require_tree .
-//= require jquery-ui
+
+
