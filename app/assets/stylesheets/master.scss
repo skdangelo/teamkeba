@@ -19,6 +19,16 @@
   box-shadow: 0px 3px 8px #2a2a2a;
 }
 
+.btn {
+  border-radius: 0;
+  background-color: #008CBA;
+}
+
+.btn:hover {
+  background-color: #DC143C; 
+  color: white;
+}
+
 .feature {
   width: 100%;
   padding-left: 5%;
