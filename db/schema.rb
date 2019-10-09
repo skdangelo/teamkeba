@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_02_085103) do
+ActiveRecord::Schema.define(version: 2019_10_09_075050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,10 @@ ActiveRecord::Schema.define(version: 2019_10_02_085103) do
     t.integer "program_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "notification_params"
+    t.string "status"
+    t.string "transaction_id"
+    t.datetime "purchased_at"
     t.index ["program_id"], name: "index_enrollments_on_program_id"
     t.index ["user_id", "program_id"], name: "index_enrollments_on_user_id_and_program_id"
   end

@@ -21,11 +21,11 @@
 
 .btn {
   border-radius: 0;
-  background-color: #DC143C;
+  background-color: #008CBA;
 }
 
 .btn:hover {
-  background-color: #008CBA; 
+  background-color: #DC143C; 
   color: white;
 }
 
@@ -165,7 +165,7 @@ ul .header .fa {
 }
 
 .hero-block {
-  height: 370px;
+  height: 75vh;
   background-color: #E7717D;
 }
 
@@ -173,11 +173,18 @@ ul .header .fa {
   background-color: #C2B9B0;
   color: white;
   text-align: center;
+  height: 75vh;
 }
 
 .aboutus-block h1 {
   color: teal;
   font-size:12vw;
+}
+
+.aboutus-block p {
+  color: white;
+  margin-left: calc(50% - 40vw);
+  margin-right: calc(50% - 40vw);
 }
 
 .success-header-block {
@@ -187,6 +194,7 @@ ul .header .fa {
   -o-background-size: cover;
   background-size: cover;
   text-align: center;
+  height: 75vh;
 }
 
 .success-header-block h1 {
@@ -204,6 +212,17 @@ ul .header .fa {
   font-size:12vw;
 }
 
+.success-block h2 {
+  color: white;
+  font-size:6vw;
+  text-align: center
+}
+
+.success-block p {
+  color: white;
+  text-align: center
+}
+
 .news-header-block {
   background: image_url('news.jpeg') no-repeat fixed center;
   -webkit-background-size: cover;
@@ -212,6 +231,7 @@ ul .header .fa {
   background-size: cover;
   text-align: center;
   color: black;
+  height: 75vh;
 } 
 
 .news-header-block h1 {
@@ -226,9 +246,14 @@ ul .header .fa {
 }
 
 .featured-header-block {
-  background: image_url('serve.png') no-repeat fixed left, image_url('bump.png') no-repeat fixed center, image_url('dig.png') no-repeat fixed right;
+  background: image_url('herobw2.jpg') no-repeat fixed center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   text-align: center;
   color: black;
+  height: 75vh;
 } 
 
 .featured-header-block h1 {
