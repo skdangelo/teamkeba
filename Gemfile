@@ -58,26 +58,25 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
 gem 'jquery-rails'
-gem 'popper_js', '>= 1.12.3'
-gem 'bootstrap', '4.3.1'
+gem 'popper_js', '~> 1.11.1'
+gem 'bootstrap', '4.0.0.alpha6'
 gem 'simple_form'
 gem 'devise'
 gem 'figaro'
 gem "fog-aws"
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
 gem "mini_magick"
+gem 'carrierwave-aws'
 gem 'jquery-ui-rails'
 gem 'stripe'
 gem 'ranked-model'
 gem "font-awesome-rails"
 gem "geocoder"
 gem 'google-api-client', require: 'google/apis/calendar_v3'
-# gem 'activemerchant'
 
-source 'https://rails-assets.org' do
-  gem 'rails-assets-tether', '>= 1.3.3'
-end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'rails-assets-tether', source: 'https://rails-assets.org'
