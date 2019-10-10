@@ -30,7 +30,7 @@
             <%= link_to 'Enroll', program_enrollments_path(@program), class: 'btn btn-primary', method: :post %>
          <% else %>
            <%= form_tag program_enrollments_path(@program) do %>
-                    <div id="paypal-button-container"></div>
+<!--                     <div id="paypal-button-container"></div>
                     <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
                     <script>
                         paypal.Buttons({
@@ -56,14 +56,14 @@
                                 });
                             }
                         }).render('#paypal-button-container');
-                    </script>           
-<!--               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    </script> -->           
+               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                     data-email="<%= current_user.email %>"
                     data-description="Team Keba - <%= @program.title %> (<%= number_to_currency @program.cost %>)"
                     data-amount="<%= (@program.cost * 100).to_i %>"
-                    data-locale="auto"></script> -->
-            <% end %> 
+                    data-locale="auto"></script>
+              <% end %> 
           <% end %>
         <% end %>
       <% else %>
