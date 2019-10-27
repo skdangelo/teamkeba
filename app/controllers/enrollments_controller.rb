@@ -1,6 +1,11 @@
 class EnrollmentsController < ApplicationController
   before_action :authenticate_user!
 
+
+  def index
+    @enrollments = Enrollment.all
+  end
+
   def create
     if current_program.premium?
        # Amount in cents

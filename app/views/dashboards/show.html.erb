@@ -21,7 +21,7 @@
     <br class="clr" />
   <% end %>
 
-  <h1>Programs</h1>
+   <h1>Programs</h1>
    <% current_user.programs.each do |program| %>
     <h3 class="text-center">
       <%= link_to program.title, program_path(program) %>
