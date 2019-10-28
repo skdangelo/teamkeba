@@ -1,3 +1,4 @@
+/* For desktop: */
 @import "bootstrap";
 @import "font-awesome";
 
@@ -270,4 +271,110 @@ ul .header .fa {
   width: 800px;
   margin-left: auto; 
   margin-right: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .hero-block {
+    height: 50vh;
+    background-color: #E7717D;
+  }
+
+  .aboutus-block {
+    background-color: #C2B9B0;
+    color: white;
+    text-align: center;
+    height: 50vh;
+  }
+
+  .aboutus-block h1 {
+    color: teal;
+    font-size:12vw;
+  }
+
+  .aboutus-block p {
+    color: white;
+    margin-left: calc(50% - 40vw);
+    margin-right: calc(50% - 40vw);
+  }
+
+  .success-header-block {
+    background: image_url('court.jpg') no-repeat fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    height: 50vh;
+  }
+
+  .success-header-block h1 {
+    color: teal;
+    font-size:12vw;
+  }
+
+  .success-block {
+    height: 50vh;
+    background-color: #7D9F9E;
+  }
+
+  .success-block h1 {
+    color: white;
+    font-size:12vw;
+  }
+
+  .success-block h2 {
+    color: white;
+    font-size:6vw;
+    text-align: center
+  }
+
+  .success-block p {
+    color: white;
+    text-align: center
+  }
+
+  .news-header-block {
+    background: image_url('news.jpeg') no-repeat fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    color: black;
+    height: 75vh;
+  } 
+
+  .news-header-block h1 {
+    color: aqua;
+    font-size:12vw;
+  } 
+
+  .news-block {
+    height: 50vh;
+    background-color: #E7717D;
+    text-align: center;
+  }
+
+  .featured-header-block {
+    background: image_url('herobw2.jpg') no-repeat fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    color: black;
+    height: 50vh;
+  } 
+
+  .featured-header-block h1 {
+    color: black;
+    font-size:12vw;
+  }
+
+  .featured-block {
+    height: 50vh;
+    background-color: #AFD275;
+  }
+
 }
