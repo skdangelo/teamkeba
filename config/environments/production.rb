@@ -1,14 +1,14 @@
 Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: 'teamkeba.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'sitepoint-devise.herokuapp.com' }
   ActionMailer::Base.smtp_settings = {
     address: 'smtp.gmail.com',
     port: '587',
     authentication: :plain,
     user_name: ENV['SENDGRID_USERNAME'],
     password: ENV['SENDGRID_PASSWORD'],
-    domain: 'teamkeba.com',
+    domain: 'teamkeba.herokuapp.com',
     enable_starttls_auto: true
   }
   
