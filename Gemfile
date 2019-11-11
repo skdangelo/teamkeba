@@ -79,6 +79,7 @@ gem "geocoder"
 gem 'google-api-client', require: 'google/apis/calendar_v3'
 gem 'popper_js', '~> 1.14.5'
 gem 'bootstrap', '~> 4.3.1'
+gem 'scenic'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end

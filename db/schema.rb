@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_09_075050) do
+ActiveRecord::Schema.define(version: 2019_11_04_060024) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,6 +67,11 @@ ActiveRecord::Schema.define(version: 2019_10_09_075050) do
     t.index ["user_id"], name: "index_programs_on_user_id"
   end
 
+  create_table "reports", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -101,4 +106,20 @@ ActiveRecord::Schema.define(version: 2019_10_09_075050) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+
+  create_view "report_enrollments", sql_definition: <<-SQL
+      SELECT users.email,
+      users.firstname,
+      users.lastname,
+      users.cell,
+      users.parent1,
+      users.parent2,
+      enrollments.program_id,
+      programs.title,
+      programs.cost
+     FROM ((users
+       JOIN enrollments ON ((users.id = enrollments.user_id)))
+       JOIN programs ON ((enrollments.program_id = programs.id)))
+    ORDER BY users.lastname, users.firstname;
+  SQL
 end
