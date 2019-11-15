@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'paperwork', to: 'static_pages#paperwork'
   get 'news', to: 'static_pages#news'
   get 'gallery', to: 'static_pages#gallery'
+  get 'club', to: 'static_pages#club'
   resources :programs, only: [:index, :show] do
     resources :enrollments, only: :create
   end

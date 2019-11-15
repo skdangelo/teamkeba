@@ -1,0 +1,104 @@
+<div class="booyah-box col-10 offset-1">
+  <h1>Team Keba Club Season</h1>
+  
+  <i>CSO MultiPlex - 1301 E. 47th St. Hyde Park, IL 60653</i>
+  <br/><br/>
+  <div class="row">
+    <div class="col-sm-4 col-12">
+      <span class="badge badge-default">
+        2019-11-01<br />
+        2020-06-27
+      </span>
+      <br />
+      <br />
+
+       <% if current_user %>
+          <% if current_user.enrolled_in?(7) %>
+            <h3 class="badge badge-info">You Are Enrolled!</h3>
+          <% end %>
+          <%= form_tag program_enrollments_path(7) do %>
+             <h4>Option 1 - Payment in Full:</h4>
+             16-18U Club Full Payment ($2400)<br />
+             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-email="<%= current_user.email %>"
+                  data-description="Team Keba 16-18U Club Full Payment ($2400)"
+                  data-amount="<%= (2400 * 100).to_i %>"
+                  data-locale="auto">
+              </script>
+              <br /><br />
+              14U Club Full Payment ($2100)<br />
+             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-email="<%= current_user.email %>"
+                  data-description="Team Keba 14U Club Full Payment ($2100)"
+                  data-amount="<%= (2100 * 100).to_i %>"
+                  data-locale="auto">
+              </script>
+
+<br />
+<br />
+
+              <h4>Option 2 - 6 payments:</h4>
+
+              Initial Down Payment due by 11/27 ($500):<br />
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-email="<%= current_user.email %>"
+                  data-description="Team Keba Club Season Down Payment ($500)"
+                  data-amount="<%= (500 * 100).to_i %>"
+                  data-locale="auto">
+              </script>
+<br /><br />
+
+              Then 5 months payments<br />
+              16-18U Monthly Payment ($380)<br />
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-email="<%= current_user.email %>"
+                  data-description="Team Keba Club 16-18U Monthly Payment ($380)"
+                  data-amount="<%= (380 * 100).to_i %>"
+                  data-locale="auto">
+              </script>
+<br />
+              14U Monbthly Payment ($320)<br />
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-email="<%= current_user.email %>"
+                  data-description="Team Keba Club 14U Monthly Payment ($320)"
+                  data-amount="<%= (320 * 100).to_i %>"
+                  data-locale="auto">
+              </script>
+
+          <% end %>
+      <% else %>
+        <h1 class="badge badge-info">Sign In to Enroll!</h1><br />
+        <%= link_to 'Sign in', new_user_session_path, class: 'btn btn-primary' %>
+        <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary' %>
+      <% end %>       
+    </div>
+
+    <div class="col-sm-8 col-12">
+      <p>Club Information<br />
+      <br />
+      We are looking forward to the upcoming Club Season!<br /><br />
+     <p>Tournaments<br />
+        <b>Regional U14 and under</b><br />
+        Cleveland OH January 18-January 19<br />
+        Milwaukee, WI February 15-February 16<br />
+        Rockford, IL March 7-March 8<br />
+        Louisville, KY April 3-April 5<br />
+        Top Flight May 30<br />
+        Orlando, FL June 20-June 24<br />
+        <br /><br />
+        <b>National 16-18U</b><br />
+        Cleveland, OH January 18-January 19<br />
+        Milwaukee, WI February 1-February 2<br />
+        Las Vegas, NV March 7-March 8<br />
+        Louisville, KY April 3-April 5<br />
+        Long Beach, CA May 23-May 25<br />
+        Orlando, FL June 22-June 28<br />
+      </p>
+    </div>
+  </div>
+ </div>
