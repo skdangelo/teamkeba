@@ -41,23 +41,13 @@
 
               <h4>Option 2 - 6 payments:</h4>
 
-              Initial Down Payment due by 11/27 ($500):<br />
-              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                  data-email="<%= current_user.email %>"
-                  data-description="Team Keba Club Season Down Payment ($500)"
-                  data-amount="<%= (500 * 100).to_i %>"
-                  data-locale="auto">
-              </script>
-<br /><br />
-
-              Then 5 months payments<br />
+              First Payment due by 11/27 ($500):<br />
               16-18U Monthly Payment ($380)<br />
               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                   data-email="<%= current_user.email %>"
-                  data-description="Team Keba Club 16-18U Monthly Payment ($380)"
-                  data-amount="<%= (380 * 100).to_i %>"
+                  data-description="Team Keba Club 16-18U Monthly Payment ($400)"
+                  data-amount="<%= (480 * 100).to_i %>"
                   data-locale="auto">
               </script>
 <br />
@@ -65,8 +55,8 @@
               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                   data-email="<%= current_user.email %>"
-                  data-description="Team Keba Club 14U Monthly Payment ($320)"
-                  data-amount="<%= (320 * 100).to_i %>"
+                  data-description="Team Keba Club 14U Monthly Payment ($350)"
+                  data-amount="<%= (350 * 100).to_i %>"
                   data-locale="auto">
               </script>
 
