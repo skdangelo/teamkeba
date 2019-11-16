@@ -41,8 +41,8 @@
 
               <h4>Option 2 - 6 payments:</h4>
 
-              First Payment due by 11/27 ($500):<br />
-              16-18U Monthly Payment ($380)<br />
+              First Payment due by 11/27:<br /><br />
+              16-18U Monthly Payment ($400)<br />
               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                   data-email="<%= current_user.email %>"
@@ -50,8 +50,8 @@
                   data-amount="<%= (480 * 100).to_i %>"
                   data-locale="auto">
               </script>
-<br />
-              14U Monbthly Payment ($320)<br />
+<br /><br />
+              14U Monbthly Payment ($350)<br />
               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                   data-email="<%= current_user.email %>"
