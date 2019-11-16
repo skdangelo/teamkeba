@@ -168,7 +168,7 @@ ul .header .fa {
 .hero-block {
   height: 75vh;
   background-color: #E7717D;
-  font-size:2vw;
+  font-size:100%;
 }
 
 .aboutus-block {
@@ -180,14 +180,14 @@ ul .header .fa {
 
 .aboutus-block h1 {
   color: teal;
-  font-size:12vw;
+  font-size:500%;
 }
 
 .aboutus-block p {
   color: white;
   margin-left: calc(50% - 40vw);
   margin-right: calc(50% - 40vw);
-  font-size:2vw;
+  font-size:100%;
 }
 
 .success-header-block {
@@ -202,23 +202,24 @@ ul .header .fa {
 
 .success-header-block h1 {
   color: teal;
-  font-size:12vw;
+  font-size:500%;
 }
 
 .success-block {
   height: 75vh;
   background-color: #7D9F9E;
-  font-size:1vw;
+  font-size:100%;
+  text-align: center;
 }
 
 .success-block h1 {
   color: white;
-  font-size:12vw;
+  font-size:500%;
 }
 
 .success-block h2 {
   color: white;
-  font-size:6vw;
+  font-size:105%;
   text-align: center
 }
 
@@ -240,7 +241,7 @@ ul .header .fa {
 
 .news-header-block h1 {
   color: aqua;
-  font-size:12vw;
+  font-size:500%;
 } 
 
 .news-block {
@@ -262,7 +263,7 @@ ul .header .fa {
 
 .featured-header-block h1 {
   color: black;
-  font-size:12vw;
+  font-size:500%;
 }
 
 .featured-block {
@@ -292,13 +293,14 @@ ul .header .fa {
 
   .aboutus-block h1 {
     color: teal;
-    font-size:12vw;
+    font-size:500%;;
   }
 
   .aboutus-block p {
     color: white;
     margin-left: calc(50% - 40vw);
     margin-right: calc(50% - 40vw);
+    font-size:100%;
   }
 
   .success-header-block {
@@ -313,7 +315,7 @@ ul .header .fa {
 
   .success-header-block h1 {
     color: teal;
-    font-size:12vw;
+    font-size:500%;
   }
 
   .success-block {
@@ -323,7 +325,7 @@ ul .header .fa {
 
   .success-block h1 {
     color: white;
-    font-size:12vw;
+    font-size:500%;
   }
 
   .success-block h2 {
@@ -350,7 +352,7 @@ ul .header .fa {
 
   .news-header-block h1 {
     color: aqua;
-    font-size:12vw;
+    font-size:500%;
   } 
 
   .news-block {
@@ -372,7 +374,7 @@ ul .header .fa {
 
   .featured-header-block h1 {
     color: black;
-    font-size:12vw;
+    font-size:500%;
   }
 
   .featured-block {
