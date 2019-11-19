@@ -13,10 +13,10 @@
       <br />
 
        <% if current_user %>
-          <% if current_user.enrolled_in?(7) %>
+          <% if current_user.enrolled_in?(8) %>
             <h3 class="badge badge-info">You Are Enrolled!</h3>
           <% end %>
-          <%= form_tag program_enrollments_path(7) do %>
+          <%= form_tag program_enrollments_path(8) do %>
              <h4>Option 1 - Payment in Full:</h4>
              16-18U Club Full Payment ($2400)<br />
              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
