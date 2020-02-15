@@ -277,6 +277,90 @@ ul .header .fa {
   margin-right: auto;
 }
 
+#gallery img{
+  width: 100%;
+}
+
+#gallery .col-md-3{
+  padding:0;
+}
+
+.photo{
+  text-align: center;
+  position:relative;
+}
+
+.photo, 
+.photo-hover, 
+.photo-hover .mask, 
+.photo-img, 
+.photo-info{
+  width: 300px;
+  height: 220px;
+}
+
+.photo-img, 
+.photo-hover, 
+.photo-hover .mask{
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.photo-type-line .photo-hover{
+  z-index:100;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  opacity:0;
+  cursor:pointer;
+  display:block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.photo-type-line .photo-info{
+  z-index: 10;
+  color:#fff;
+  display:table-cell;
+  vertical-align:middle;
+  position: relative;
+}
+
+.photo-type-line .photo-info .headline{
+  font-size:20px;
+}
+
+.photo-type-line .photo-info .line{
+  height:1px;
+  width:0%;
+  margin:15px auto;
+  background:#fff;
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+
+.photo-type-line .photo-info .mask{
+  background:#000;
+  filter:alpha(opacity=50);
+  opacity:0.5;
+  z-index:0;
+}
+
+.photo-type-line .photo-hover:hover .line{
+  width:40%;
+}
+
+.photo-type-line .photo-hover:hover{
+  opacity:1;
+}
+
+.photo-img{
+  background:#7a548f;
+  z-index:0;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .hero-block {

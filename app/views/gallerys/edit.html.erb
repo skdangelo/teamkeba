@@ -1,0 +1,8 @@
+<div class="booyah-box col-10 offset-1">
+  <h1>Edit Gallery</h1>
+  <%= simple_form_for @gallery do |f| %>
+    <%= f.input :name %>
+    <br />
+    <%= f.submit 'Update', class: 'btn btn-primary' %>
+  <% end %>
+</div>

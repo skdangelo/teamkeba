@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'calendar', to: 'static_pages#calendar'
   get 'paperwork', to: 'static_pages#paperwork'
   get 'news', to: 'static_pages#news'
-  get 'gallery', to: 'static_pages#gallery'
+  #get 'gallery', to: 'static_pages#gallery'
   get 'club', to: 'static_pages#club'
   resources :programs, only: [:index, :show] do
     resources :enrollments, only: :create
@@ -21,6 +21,12 @@ Rails.application.routes.draw do
   end
 
   resources :contacts
+
+  resources :teams
+  
+  resources :gallerys do 
+    resources :photos
+  end
 
   get '/redirect', to: 'calendar#redirect', as: 'redirect'
   get '/callback', to: 'calendar#callback', as: 'callback'  
