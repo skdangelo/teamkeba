@@ -5,10 +5,9 @@
   <br/><br/>
   <div class="row">
     <div class="col-sm-8 col-12">
-      <span class="badge badge-default">
-        2019-11-01<br />
-        2020-06-27
-      </span>
+<p>Due to the IHSA changes, the 2020-21 season will begin in September of 2020. Please stay tuned for tryout information as well as pre-registration for our current members for the 2020-21 season. Please note, due to State of Illinois guidelines, we will be limited in numbers this season, so we encourage everyone to sign up during pre-registration. Pre-registering will allow your child a spot in the program without trying out.  We will only be trying out new members.</p>
+
+<p>For current high school players, the season will run from September 1-February 15th and then continue May 1st through the end of June. For 8th graders and under, families can decide between a September 1st-May 30th season, or November 1st-May 30th season. Teams who qualify for AAU or USA Nationals can continue through June for a separate fee. The boys program will run from September 1st-April 30th.</p>
       <br />
       <br />
 
@@ -16,7 +15,7 @@
           <% if current_user.enrolled_in?(8) %>
             <h3 class="badge badge-info">You Are Enrolled!</h3>
           <% end %>
-          <%= form_tag program_enrollments_path(8) do %>
+<!--           <%= form_tag program_enrollments_path(8) do %>
              <h4>Option 1 - Payment in Full:</h4>
              16-18U Club Full Payment ($2400)<br />
              14U Club Full Payment ($2100)<br />
@@ -92,7 +91,7 @@
                 handler.close();
               });       
               </script>                        
-          <% end %>
+          <% end %> -->
       <% else %>
         <h1 class="badge badge-info">Sign In to Enroll!</h1><br />
         <%= link_to 'Sign in', new_user_session_path, class: 'btn btn-primary' %>
@@ -101,27 +100,16 @@
     </div>
 
     <div class="col-sm-3 col-12">
-      <p>Club Information<br />
+<!--       <p>Club Information<br />
       <br />
       We are looking forward to the upcoming Club Season!<br /><br />
      <p>Tournaments<br />
         <b>Regional U14 and under</b><br />
-          Rockford, IL January 18-January 19<br />
-          Milwaukee, WI February 1-February 2<br />
-          Rockford, IL February 29-March 1<br />
-          Pontiac, MI April 18-April 19<br />
-          Elgin, IL May 30<br />
-          Orlando, FL June 20-June 24
+        To be announced
         <br /><br />
         <b>National 16-18U</b><br />
-          Rockford, IL January 25-January 26<br />
-          Milwaukee, WI February 1-February 2<br />
-          Las Vegas, NV March 7-March 8<br />
-          Pontiac, MI April 18-April 19<br />
-          Rockford, IL May 9-May 10<br />
-          Orlando, FL May 23-May 25<br />
-          Orlando, FL June 22-June 28
-      </p>
+        To be announced
+      </p>-->
     </div>
   </div>
  </div>

@@ -1,6 +1,10 @@
 class DashboardsController < ApplicationController
   before_action :authenticate_user!
-  def show
-    @reports = report.all
+  def index
+    @reports = Report.all
   end
+
+  def new
+    @greports = Report.new
+  end  
 end

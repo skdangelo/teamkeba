@@ -2,7 +2,7 @@ class GallerysController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @gallerys = Gallery.all.page(params[:page]).per(5)
+    @gallerys = Gallery.all
   end
 
   def new
