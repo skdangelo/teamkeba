@@ -10,10 +10,24 @@
 <p>For current high school players, the season will run from September 1-February 15th and then continue May 1st through the end of June. For 8th graders and under, families can decide between a September 1st-May 30th season, or November 1st-May 30th season. Teams who qualify for AAU or USA Nationals can continue through June for a separate fee. The boys program will run from September 1st-April 30th.</p>
       <br />
       <br />
-
+       <h3>Team Keba 2020-2021 Tryouts</h3>
+      <p>
+      September 1st 10am-1pm<br />
+      CSO Mutliplex<br />
+      1301 East 47st<br />
+      Chicago IL
+      </p>
+      <p>
+      September 1st 5pm-8pm<br />
+      Pullman community center<br />
+      10355 S Woodlawn<br />
+      Chicago IL</p>
+      <br />
        <% if current_user %>
-          <% if current_user.enrolled_in?(8) %>
+          <% if current_user.enrolled_in?(10) %>
             <h3 class="badge badge-info">You Are Enrolled!</h3>
+          <% else %>
+            <%= link_to 'Enroll', "/programs/10", class: 'btn btn-success' %>               
           <% end %>
 <!--           <%= form_tag program_enrollments_path(8) do %>
              <h4>Option 1 - Payment in Full:</h4>
@@ -93,9 +107,7 @@
               </script>                        
           <% end %> -->
       <% else %>
-        <h1 class="badge badge-info">Sign In to Enroll!</h1><br />
-        <%= link_to 'Sign in', new_user_session_path, class: 'btn btn-primary' %>
-        <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary' %>
+        <%= link_to 'Enroll', "/programs/10", class: 'btn btn-success' %>   
       <% end %>       
     </div>
 
