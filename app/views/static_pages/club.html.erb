@@ -12,115 +12,39 @@
 
 <p>
 Club Team Pricing<br />
-$1800<br /><br />
+$1750<br /><br />
 Due to IHSA changes, only the training team program will be available for the 2020-2021 club season.  This includes training 3 days per week and will also provide opportunities to video tape skills and practice scrimmages for college scouts. <br /><br />
-Upon registering the athlete will be able to apply for a payment plan via our Payment Provider which will be $360 per month for 5 months. 
-
+Upon registering the athlete will be able to apply for a payment plan via our Payment Provider which will be $350 per month for 5 months. 
 </p>      
       <br />
        <h3>Team Keba 2020-2021</h3>
       <p>
         If you have received your acceptance letter. Please make first payment below. Thank you and looking forward to working with you all. 
       <br />
+
        <% if current_user %>
           <% if current_user.enrolled_in?(11) %>
-            <h3 class="badge badge-info">You have paid!</h3>
+            <h3 class="badge badge-info">You have paid September payment.</h3>
           <% else %>
             <%= link_to 'September Payment', "/programs/11", class: 'btn btn-success' %>               
           <% end %>
-<!--           <%= form_tag program_enrollments_path(8) do %>
-             <h4>Option 1 - Payment in Full:</h4>
-             16-18U Club Full Payment ($2400)<br />
-             14U Club Full Payment ($2100)<br />
-            
-<br />
-<br />
-
-              <h4>Option 2 - 6 payments:</h4>
-              First Payment due by 11/27:<br /><br />
-              16-18U Monthly Payment ($400)<br />
-              14U Monbthly Payment ($350)<br />
-<br />
-<br />
-
-             <h4>Option 3 - Downpayment of $500 + 5 payments:</h4>
-             16-18U Monthly Payment ($380)<br />
-             14U Monthly Payment ($320)<br />
-<br />
-<br />
-             <h4>Option 4 - Make a specified payment</h4>
-<br />
-<br />
-              Please enter the amount to pay in the box below then click Payment button. <br /><br />           
-
-              <article>
-                <%= label_tag(:amount, 'Payment Amount:') %>
-                <%= text_field_tag(:amount) %>
-              </article>
-              <article>
-                <%= hidden_field_tag(:stripeToken) %>
-              </article>
-              <button id='donateButton'>Payment</button>
-
-              <script src="https://checkout.stripe.com/checkout.js"></script>
-              <script>
-              var handler = StripeCheckout.configure({
-                key: '<%= Rails.configuration.stripe[:publishable_key] %>',
-                locale: 'auto',
-                name: 'Team Keba Payment',
-                description: 'Team Keba Club Payment',
-                token: function(token) {
-                  $('input#stripeToken').val(token.id);
-                  $('form').submit();
-                }
-              });
-
-              $('#donateButton').on('click', function(e) {
-                e.preventDefault();
-
-                $('#error_explanation').html('');
-
-                var amount = $('input#amount').val();
-                amount = amount.replace(/\$/g, '').replace(/\,/g, '')
-
-                amount = parseFloat(amount);
-
-                if (isNaN(amount)) {
-                  $('#error_explanation').html('<p>Please enter a valid amount in USD ($).</p>');
-                }
-                else if (amount < 5.00) {
-                  $('#error_explanation').html('<p>Payment amount must be at least $5.</p>');
-                }
-                else {
-                  amount = amount * 100; // Needs to be an integer!
-                  handler.open({
-                    amount: Math.round(amount)
-                  })
-                }
-              });      
-              
-              // Close Checkout on page navigation
-              $(window).on('popstate', function() {
-                handler.close();
-              });       
-              </script>                        
-          <% end %> -->
+      <br />
+      <br />
+          <% if current_user.enrolled_in?(12) %>
+            <h3 class="badge badge-info">You have paid in full!</h3>
+          <% else %>
+            <%= link_to 'Full Payment', "/programs/12", class: 'btn btn-success' %>               
+          <% end %>
       <% else %>
         <%= link_to 'September Payment', "/programs/11", class: 'btn btn-success' %>   
+      <br />
+      <br />
+        <%= link_to 'Full Payment', "/programs/12", class: 'btn btn-success' %>   
+
       <% end %>       
     </div>
 
     <div class="col-sm-3 col-12">
-<!--       <p>Club Information<br />
-      <br />
-      We are looking forward to the upcoming Club Season!<br /><br />
-     <p>Tournaments<br />
-        <b>Regional U14 and under</b><br />
-        To be announced
-        <br /><br />
-        <b>National 16-18U</b><br />
-        To be announced
-      </p>-->
     </div>
   </div>
  </div>
