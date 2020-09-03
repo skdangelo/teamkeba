@@ -18,24 +18,18 @@ Upon registering the athlete will be able to apply for a payment plan via our Pa
 
 </p>      
       <br />
-       <h3>Team Keba 2020-2021 Tryouts</h3>
+       <h3>Team Keba 2020-2021</h3>
       <p>
-      September 1st 10am-1pm<br />
-      CSO Mutliplex<br />
-      1301 East 47st<br />
-      Chicago IL
+        Tryouts have already occurred. Please contact us at info@teamkeba.com if you would like to schedule an individual tryout session. 
       </p>
       <p>
-      September 1st 5pm-8pm<br />
-      Pullman community center<br />
-      10355 S Woodlawn<br />
-      Chicago IL</p>
+        If you have received your acceptance letter. Please make first payment below. Thank you and looking forward to working with you all. 
       <br />
        <% if current_user %>
-          <% if current_user.enrolled_in?(10) %>
+          <% if current_user.enrolled_in?(11) %>
             <h3 class="badge badge-info">You Are Enrolled!</h3>
           <% else %>
-            <%= link_to 'Enroll', "/programs/10", class: 'btn btn-success' %>               
+            <%= link_to 'September Payment', "/programs/11", class: 'btn btn-success' %>               
           <% end %>
 <!--           <%= form_tag program_enrollments_path(8) do %>
              <h4>Option 1 - Payment in Full:</h4>
@@ -115,7 +109,7 @@ Upon registering the athlete will be able to apply for a payment plan via our Pa
               </script>                        
           <% end %> -->
       <% else %>
-        <%= link_to 'Enroll', "/programs/10", class: 'btn btn-success' %>   
+        <%= link_to 'Enroll', "/programs/11", class: 'btn btn-success' %>   
       <% end %>       
     </div>
 
