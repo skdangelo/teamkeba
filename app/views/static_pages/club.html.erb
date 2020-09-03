@@ -27,7 +27,7 @@ Upon registering the athlete will be able to apply for a payment plan via our Pa
       <br />
        <% if current_user %>
           <% if current_user.enrolled_in?(11) %>
-            <h3 class="badge badge-info">You Are Enrolled!</h3>
+            <h3 class="badge badge-info">You have paid!</h3>
           <% else %>
             <%= link_to 'September Payment', "/programs/11", class: 'btn btn-success' %>               
           <% end %>
@@ -109,7 +109,7 @@ Upon registering the athlete will be able to apply for a payment plan via our Pa
               </script>                        
           <% end %> -->
       <% else %>
-        <%= link_to 'Enroll', "/programs/11", class: 'btn btn-success' %>   
+        <%= link_to 'September Payment', "/programs/11", class: 'btn btn-success' %>   
       <% end %>       
     </div>
 
