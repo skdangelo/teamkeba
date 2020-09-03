@@ -33,7 +33,7 @@ Upon registering the athlete will be able to apply for a payment plan via our Pa
           <% if current_user.enrolled_in?(13) %>
             <h3 class="badge badge-info">You have paid in full!</h3>
           <% else %>
-            <%= link_to 'Full Payment', "/programs/13", class: 'btn btn-success' %>               
+            <%= link_to 'Full Season Payment', "/programs/13", class: 'btn btn-success' %>               
           <% end %>
       <% else %>
         <%= link_to 'September Payment', "/programs/11", class: 'btn btn-success' %>   
