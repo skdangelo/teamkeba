@@ -22,14 +22,21 @@ Upon registering the athlete will be able to apply for a payment plan via our Pa
         If you have received your acceptance letter. Please make first payment below. Thank you and looking forward to working with you all. 
       <br />
 
-       <% if current_user %>
+      <% if current_user %>
           <% if current_user.enrolled_in?(11) %>
             <h3 class="badge badge-info">You have paid September payment.</h3>
           <% else %>
             <%= link_to 'September Payment', "/programs/11", class: 'btn btn-success' %>               
           <% end %>
-      <br />
-      <br />
+          <br />
+          <br />
+          <% if current_user.enrolled_in?(14) %>
+            <h3 class="badge badge-info">You have paid September bimonthly payment.</h3>
+          <% else %>
+            <%= link_to 'September Payment', "/programs/11", class: 'btn btn-success' %>               
+          <% end %>
+          <br />
+          <br />
           <% if current_user.enrolled_in?(13) %>
             <h3 class="badge badge-info">You have paid in full!</h3>
           <% else %>
@@ -37,10 +44,12 @@ Upon registering the athlete will be able to apply for a payment plan via our Pa
           <% end %>
       <% else %>
         <%= link_to 'September Payment', "/programs/11", class: 'btn btn-success' %>   
-      <br />
-      <br />
+        <br />
+        <br />
+        <%= link_to 'September Bimonthly Payment', "/programs/14", class: 'btn btn-success' %>   
+        <br />
+        <br />
         <%= link_to 'Full Season Payment', "/programs/13", class: 'btn btn-success' %>   
-
       <% end %>       
     </div>
 
