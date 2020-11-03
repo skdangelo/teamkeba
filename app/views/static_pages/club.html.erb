@@ -23,6 +23,52 @@ Upon registering the athlete will be able to apply for a payment plan via our Pa
       <br />
 
       <% if current_user %>
+          <p>NOVEMBER</p>
+          <% if current_user.enrolled_in?(19) %>
+            <h3 class="badge badge-info">You have paid November payment.</h3>
+          <% else %>
+            <%= link_to 'November Payment', "/programs/19", class: 'btn btn-success' %>               
+          <% end %>
+          <br />
+          <p>OR</p>
+          <% if current_user.enrolled_in?(20) %>
+            <h3 class="badge badge-info">You have paid November bi-monthly payment #1.</h3>
+          <% else %>
+            <%= link_to 'November Bi-monthly Payment #1', "/programs/20", class: 'btn btn-success' %>               
+          <% end %>
+          <br />
+          <% if current_user.enrolled_in?(21) %>
+            <h3 class="badge badge-info">You have paid November bi-monthly payment #2.</h3>
+          <% else %>
+            <%= link_to 'November Bi-monthly Payment #1', "/programs/21", class: 'btn btn-success' %>               
+          <% end %>
+          <br />
+          <br />
+          <br />
+          <p>OCTOBER</p>
+          <% if current_user.enrolled_in?(15) %>
+            <h3 class="badge badge-info">You have paid October payment.</h3>
+          <% else %>
+            <%= link_to 'October Payment', "/programs/15", class: 'btn btn-success' %>               
+          <% end %>
+          <br />
+           <p>OR</p>
+          <% if current_user.enrolled_in?(17) %>
+            <h3 class="badge badge-info">You have paid October bi-monthly payment #1.</h3>
+          <% else %>
+            <%= link_to 'October Bi-monthly Payment #1', "/programs/17", class: 'btn btn-success' %>               
+          <% end %>
+          <br />
+          <% if current_user.enrolled_in?(18) %>
+            <h3 class="badge badge-info">You have paid October bi-monthly payment #2.</h3>
+          <% else %>
+            <%= link_to 'October Bi-monthly Payment #1', "/programs/18", class: 'btn btn-success' %>               
+          <% end %>
+          <br />
+          <br />
+          <br />
+
+          <p>SEPTEMBER</p>
           <% if current_user.enrolled_in?(11) %>
             <h3 class="badge badge-info">You have paid September payment.</h3>
           <% else %>
@@ -30,6 +76,7 @@ Upon registering the athlete will be able to apply for a payment plan via our Pa
           <% end %>
           <br />
           <br />
+           <p>OR</p>
           <% if current_user.enrolled_in?(14) %>
             <h3 class="badge badge-info">You have paid September bimonthly payment.</h3>
           <% else %>
@@ -37,16 +84,36 @@ Upon registering the athlete will be able to apply for a payment plan via our Pa
           <% end %>
           <br />
           <br />
+
+
+          <p>FULL SEASON</p>
           <% if current_user.enrolled_in?(13) %>
             <h3 class="badge badge-info">You have paid in full!</h3>
           <% else %>
             <%= link_to 'Full Season Payment', "/programs/13", class: 'btn btn-success' %>               
           <% end %>
       <% else %>
+        <%= link_to 'November Payment', "/programs/19", class: 'btn btn-success' %>   
+        <br />
+        <%= link_to 'November Bi-monthly Payment #1', "/programs/20", class: 'btn btn-success' %>   
+        <br />
+        <%= link_to 'November Bi-monthly Payment #2', "/programs/21", class: 'btn btn-success' %>   
+        <br />
+        <br />
+        <br />
+
+        <%= link_to 'October Payment', "/programs/15", class: 'btn btn-success' %>   
+        <br />
+        <%= link_to 'October Bi-monthly Payment #1', "/programs/17", class: 'btn btn-success' %>   
+        <br />
+        <%= link_to 'October Bi-monthly Payment #2', "/programs/18", class: 'btn btn-success' %>   
+        <br />
+        <br />
+        <br />
         <%= link_to 'September Payment', "/programs/11", class: 'btn btn-success' %>   
         <br />
-        <br />
         <%= link_to 'September Bimonthly Payment', "/programs/14", class: 'btn btn-success' %>   
+        <br />
         <br />
         <br />
         <%= link_to 'Full Season Payment', "/programs/13", class: 'btn btn-success' %>   
