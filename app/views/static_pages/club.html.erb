@@ -53,10 +53,10 @@ Upon registering the athlete will be able to apply for a payment plan via our Pa
           <% end %>
           <br />
            <p>OR</p>
-          <% if current_user.enrolled_in?(17) %>
+          <% if current_user.enrolled_in?(16) %>
             <h3 class="badge badge-info">You have paid October bi-monthly payment #1.</h3>
           <% else %>
-            <%= link_to 'October Bi-monthly Payment #1', "/programs/17", class: 'btn btn-success' %>               
+            <%= link_to 'October Bi-monthly Payment #1', "/programs/16", class: 'btn btn-success' %>               
           <% end %>
           <br />
           <% if current_user.enrolled_in?(18) %>
@@ -104,7 +104,7 @@ Upon registering the athlete will be able to apply for a payment plan via our Pa
 
         <%= link_to 'October Payment', "/programs/15", class: 'btn btn-success' %>   
         <br />
-        <%= link_to 'October Bi-monthly Payment #1', "/programs/17", class: 'btn btn-success' %>   
+        <%= link_to 'October Bi-monthly Payment #1', "/programs/16", class: 'btn btn-success' %>   
         <br />
         <%= link_to 'October Bi-monthly Payment #2', "/programs/18", class: 'btn btn-success' %>   
         <br />
